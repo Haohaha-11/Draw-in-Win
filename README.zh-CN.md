@@ -4,7 +4,7 @@
 
 [English README](README.md) · [图表目录](docs/CATALOG.md) · [复现说明](docs/REPRODUCIBILITY.md) · [贡献指南](CONTRIBUTING.md)
 
-Draw-in-Win 是从真实数学建模研究项目中整理出的科研绘图库，现收录 **69 个 Python 脚本、2 个 R 脚本、配套示例数据，以及 130 个保留的 PNG/SVG/PDF 图表文件**。仓库重点覆盖相关性分析、网络关系、极坐标可视化、三维图、参数敏感性、模型对比、体育运营分析与可解释机器学习。
+Draw-in-Win 是从真实数学建模研究项目中整理出的科研绘图库，现收录 **71 个 Python 脚本、2 个 R 脚本、配套示例数据，以及 136 个保留的 PNG/SVG/PDF 图表文件**。仓库重点覆盖相关性分析、网络关系、极坐标可视化、三维图、参数敏感性、模型对比、体育运营分析与可解释机器学习。
 
 整理过程中保留了原图的论文级导出能力，同时完成了主题归档、确定重复项清理、机器绝对路径替换、商业字体文件排除和自动质量检查。原始代码目录没有被修改。
 
@@ -27,19 +27,21 @@ Draw-in-Win 是从真实数学建模研究项目中整理出的科研绘图库�
 | ![赛季策略对比](collections/model-studies/season-and-recovery/season_comparison_bar.png) | ![SDG 得分演化热图](collections/sdg-systems/sdg_score_evolution.png) |
 | **赛季策略对比**<br>[查看脚本](collections/model-studies/season-and-recovery/season_comparison_bar.py) · `python collections/model-studies/season-and-recovery/season_comparison_bar.py` | **SDG 得分演化**<br>[查看脚本](collections/sdg-systems/sdg_score_evolution.py) · `python collections/sdg-systems/sdg_score_evolution.py` |
 
-四联雷达图根据栅格参考图复现了版式与视觉风格。脚本已明确注明其中的基准数组为视觉反推占位值；如需进行定量比较，应替换为实验原始数据。
+四联雷达图和两张阶段实证研究图均根据栅格参考图复现版式与视觉风格。脚本已明确注明其中的基准数组、曲线检查点和搜索轨迹为视觉反推占位值；如需进行定量比较，应替换为实验原始数据。
 
 更多预览见 [`docs/assets/gallery`](docs/assets/gallery)，其他历史输出保留在对应脚本旁边。
 
 ## 完整图表图库
 
-下面展示全部 **54 个不重复的保留预览**：`collections/` 下的每一张 PNG、3 个只有 SVG 的独立图，以及 3 张只存在于精选图库中的有效成品。完全相同的重复拷贝只展示一次。点击预览可打开原始尺寸；如有对应 SVG/PDF，它们仍保留在生成脚本旁边。
+下面展示全部 **56 个不重复的保留预览**：`collections/` 下的每一张 PNG、3 个只有 SVG 的独立图，以及 3 张只存在于精选图库中的有效成品。完全相同的重复拷贝只展示一次。点击预览可打开原始尺寸；如有对应 SVG/PDF，它们仍保留在生成脚本旁边。
 
-### 通用科研图——13 张
+### 通用科研图——15 张
 
 | 论文风格多模型雷达图 | 组合科研图 |
 |:--:|:--:|
 | [![论文风格多模型雷达图](collections/scientific-charts/paper_style_multi_radar.png)](collections/scientific-charts/paper_style_multi_radar.png) | [![组合科研图](collections/scientific-charts/scientific_combined_plot.png)](collections/scientific-charts/scientific_combined_plot.png) |
+| **自适应阶段 Token 保留率研究** | **渐进阶段选择连续性研究** |
+| [![自适应阶段 Token 保留率研究](collections/scientific-charts/adaptive_stage_empirical_study.png)](collections/scientific-charts/adaptive_stage_empirical_study.png) | [![渐进阶段选择连续性研究](collections/scientific-charts/progressive_stage_empirical_study.png)](collections/scientific-charts/progressive_stage_empirical_study.png) |
 | **带误差线的分组柱状图** | **分组弦图** |
 | [![带误差线的分组柱状图](collections/scientific-charts/grouped_bar_with_error.png)](collections/scientific-charts/grouped_bar_with_error.png) | [![分组弦图](collections/scientific-charts/grouped_chord_diagram.png)](collections/scientific-charts/grouped_chord_diagram.png) |
 | **弦图独立图例** | **混合相关性矩阵** |
@@ -121,7 +123,7 @@ Draw-in-Win 是从真实数学建模研究项目中整理出的科研绘图库�
 
 | 主题集合 | 主要内容 |
 |---|---|
-| [`scientific-charts`](collections/scientific-charts) | 相关性矩阵、弦图、多模型雷达图、组合科研图、SDG 策略对比和三维图 |
+| [`scientific-charts`](collections/scientific-charts) | 相关性矩阵、弦图、多模型雷达图、阶段实证研究图、组合科研图、SDG 策略对比和三维图 |
 | [`experimental-charts`](collections/experimental-charts) | 极坐标气泡、雷达图、玫瑰图、回归拟合、核心—边缘网络、XGBoost/SHAP |
 | [`sports-analytics`](collections/sports-analytics) | 球员排名、阵容流动、收入构成、蒙特卡洛分析和三维瀑布图 |
 | [`sensitivity-analysis`](collections/sensitivity-analysis) | 不同参数配置下的敏感性比较 |
@@ -152,7 +154,14 @@ python -m pip install -r requirements.txt
 python collections/scientific-charts/paper_style_multi_radar.py
 ```
 
-脚本会在同一目录导出 PNG、SVG 和 PDF。也可以运行组合科研图示例：
+脚本会在同一目录导出 PNG、SVG 和 PDF。两张阶段实证研究图可分别运行：
+
+```bash
+python collections/scientific-charts/adaptive_stage_empirical_study.py
+python collections/scientific-charts/progressive_stage_empirical_study.py
+```
+
+两个脚本均支持 `--output-dir` 和 `--dpi` 参数。脚本内置数值是根据栅格参考图确定性反推的近似值，并非恢复出的实验原始数据。也可以运行组合科研图示例：
 
 ```bash
 python collections/scientific-charts/scientific_combined_plot.py

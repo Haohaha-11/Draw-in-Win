@@ -10,8 +10,12 @@ These scripts generate or embed their own data and are the fastest way to explor
 - `collections/scientific-charts/resilience_trajectory_plot.py`
 - `collections/scientific-charts/3d_grouped_bar_chart.py`
 - `collections/scientific-charts/grouped_bar_with_error.py`
+- `collections/scientific-charts/adaptive_stage_empirical_study.py`
+- `collections/scientific-charts/progressive_stage_empirical_study.py`
 - `collections/experimental-charts/smooth_radial_chart.py`
 - `collections/experimental-charts/xgb_shap_2.py` (computationally heavier)
+
+The adaptive- and progressive-stage scripts are self-contained and deterministic, but their embedded values were visually reconstructed from a raster reference. They reproduce the figure design and should not be treated as the source experiment's measurements. Replace the documented checkpoints and sequences before making quantitative claims.
 
 ## Level B — bundled-data recipes
 

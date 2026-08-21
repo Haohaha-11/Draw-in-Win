@@ -9,6 +9,8 @@ Location: [`collections/scientific-charts`](../collections/scientific-charts)
 | Family | Representative script | Data | Typical output |
 |---|---|---|---|
 | Multi-model radar comparison | `paper_style_multi_radar.py` | Visually reconstructed placeholder arrays | PNG, PDF, SVG |
+| Adaptive-stage token-retention study | `adaptive_stage_empirical_study.py` | Visually reconstructed curve checkpoints and deterministic candidate cloud | PNG, PDF, SVG |
+| Progressive-stage continuity study | `progressive_stage_empirical_study.py` | Visually reconstructed layer sequences; mean computed from the five series | PNG, PDF, SVG |
 | 3D grouped bars | `3d_grouped_bar_chart.py` | Embedded | PNG, PDF, SVG |
 | 3D strategy comparison | `3d_grouped_comparison_chart.py` | Embedded | PNG, PDF |
 | Correlation heatmap | `correlation_heatmap.py` | Embedded matrix | PNG |
