@@ -4,36 +4,43 @@
 
 [English README](README.md) · [图表目录](docs/CATALOG.md) · [复现说明](docs/REPRODUCIBILITY.md) · [贡献指南](CONTRIBUTING.md)
 
-Draw-in-Win 是从真实数学建模研究项目中整理出的科研绘图库，现收录 **67 个 Python 脚本、2 个 R 脚本、配套示例数据，以及 124 个保留的 PNG/SVG/PDF 图表文件**。仓库重点覆盖相关性分析、网络关系、极坐标可视化、三维图、参数敏感性、模型对比、体育运营分析与可解释机器学习。
+Draw-in-Win 是从真实数学建模研究项目中整理出的科研绘图库，现收录 **69 个 Python 脚本、2 个 R 脚本、配套示例数据，以及 130 个保留的 PNG/SVG/PDF 图表文件**。仓库重点覆盖相关性分析、网络关系、极坐标可视化、三维图、参数敏感性、模型对比、体育运营分析与可解释机器学习。
 
 整理过程中保留了原图的论文级导出能力，同时完成了主题归档、确定重复项清理、机器绝对路径替换、商业字体文件排除和自动质量检查。原始代码目录没有被修改。
 
-## 精选图表
+## 分类示例
 
-| 组合科研图 | 网络关系 |
+六个顶层分类现在都提供一张代表性预览和一个可以直接运行的入口脚本。
+
+| 通用科研图 | 实验性图表 |
 |:--:|:--:|
-| ![组合科研图](docs/assets/gallery/scientific-combined-plot.png) | ![分组弦图](docs/assets/gallery/chord-diagram.png) |
+| ![论文风格多模型雷达图](collections/scientific-charts/paper_style_multi_radar.png) | ![核心—边缘网络](collections/experimental-charts/core_periphery_network.png) |
+| **论文风格多模型雷达图**<br>[查看脚本](collections/scientific-charts/paper_style_multi_radar.py) · `python collections/scientific-charts/paper_style_multi_radar.py` | **核心—边缘网络**<br>[查看脚本](collections/experimental-charts/hexin_bianyuan.py) · `python collections/experimental-charts/hexin_bianyuan.py` |
 
-| 混合相关性矩阵 | 三维分组对比 |
+| 体育分析 | 敏感性分析 |
 |:--:|:--:|
-| ![六边形相关热图](docs/assets/gallery/correlation-heatmap-hexagon.png) | ![三维分组柱状图](docs/assets/gallery/3d-grouped-bar-chart.png) |
+| ![球员对比雷达图](collections/sports-analytics/Rank/player_radar_chart.png) | ![Omega 参数敏感性曲线](collections/sensitivity-analysis/omega_sensitivity_W.png) |
+| **球员对比雷达图**<br>[查看脚本](collections/sports-analytics/Rank/player_radar_chart.py) · `python collections/sports-analytics/Rank/player_radar_chart.py` | **Omega 参数敏感性曲线**<br>[查看脚本](collections/sensitivity-analysis/omega_sensitivity_plot.py) · `python collections/sensitivity-analysis/omega_sensitivity_plot.py` |
 
-| 桑基流图 | 蒙特卡洛分布 |
+| 模型研究 | SDG 系统 |
 |:--:|:--:|
-| ![桑基图](docs/assets/gallery/sankey-diagram.png) | ![蒙特卡洛雨云图](docs/assets/gallery/monte-carlo-raincloud.png) |
+| ![赛季策略对比](collections/model-studies/season-and-recovery/season_comparison_bar.png) | ![SDG 得分演化热图](collections/sdg-systems/sdg_score_evolution.png) |
+| **赛季策略对比**<br>[查看脚本](collections/model-studies/season-and-recovery/season_comparison_bar.py) · `python collections/model-studies/season-and-recovery/season_comparison_bar.py` | **SDG 得分演化**<br>[查看脚本](collections/sdg-systems/sdg_score_evolution.py) · `python collections/sdg-systems/sdg_score_evolution.py` |
 
-![恢复轨迹图](docs/assets/gallery/recovery-trajectory.png)
+四联雷达图根据栅格参考图复现了版式与视觉风格。脚本已明确注明其中的基准数组为视觉反推占位值；如需进行定量比较，应替换为实验原始数据。
+
+更多预览见 [`docs/assets/gallery`](docs/assets/gallery)，其他历史输出保留在对应脚本旁边。
 
 ## 内容结构
 
 | 主题集合 | 主要内容 |
 |---|---|
-| [`scientific-charts`](collections/scientific-charts) | 相关性矩阵、弦图、组合科研图、SDG 策略对比和三维图 |
+| [`scientific-charts`](collections/scientific-charts) | 相关性矩阵、弦图、多模型雷达图、组合科研图、SDG 策略对比和三维图 |
 | [`experimental-charts`](collections/experimental-charts) | 极坐标气泡、雷达图、玫瑰图、回归拟合、核心—边缘网络、XGBoost/SHAP |
 | [`sports-analytics`](collections/sports-analytics) | 球员排名、阵容流动、收入构成、蒙特卡洛分析和三维瀑布图 |
 | [`sensitivity-analysis`](collections/sensitivity-analysis) | 不同参数配置下的敏感性比较 |
 | [`model-studies`](collections/model-studies) | 动态排名、投资—热度关系、赛季决策和恢复过程 |
-| [`sdg-systems`](collections/sdg-systems) | 动态权重、网络中心性、Spearman 数据与模型辅助代码 |
+| [`sdg-systems`](collections/sdg-systems) | SDG 得分演化、动态权重、网络中心性、Spearman 数据与模型辅助代码 |
 
 更细的“图表类型—代码—数据—输出格式”对应关系见[图表目录](docs/CATALOG.md)。
 
@@ -53,7 +60,13 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-运行一个不依赖外部数据的组合科研图示例：
+运行本次新增、且不依赖外部数据的四联雷达图示例：
+
+```bash
+python collections/scientific-charts/paper_style_multi_radar.py
+```
+
+脚本会在同一目录导出 PNG、SVG 和 PDF。也可以运行组合科研图示例：
 
 ```bash
 python collections/scientific-charts/scientific_combined_plot.py

@@ -5,6 +5,9 @@ import matplotlib
 from matplotlib import font_manager
 from pathlib import Path
 
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+
 # 设置Times New Roman字体
 plt.rcParams['font.family'] = 'Times New Roman'
 plt.rcParams['mathtext.fontset'] = 'stix'  # 数学公式使用STIX字体（类似Times New Roman）
@@ -114,16 +117,16 @@ def plot_omega_sensitivity(data_folder, save_path):
 
 
 if __name__ == '__main__':
-    # 设置路径（使用当前目录）
-    data_folder = '.'
-    save_path = 'omega_sensitivity_W.png'
+    # Resolve inputs and outputs relative to the script, not the shell directory.
+    data_folder = SCRIPT_DIR
+    save_path = SCRIPT_DIR / 'omega_sensitivity_W.png'
 
     # 绘制图表
     plot_omega_sensitivity(data_folder, save_path)
 
     # 同时保存PDF和SVG格式
-    save_path_pdf = 'omega_sensitivity_W.pdf'
-    save_path_svg = 'omega_sensitivity_W.svg'
+    save_path_pdf = SCRIPT_DIR / 'omega_sensitivity_W.pdf'
+    save_path_svg = SCRIPT_DIR / 'omega_sensitivity_W.svg'
 
     plot_omega_sensitivity(data_folder, save_path_pdf)
     plot_omega_sensitivity(data_folder, save_path_svg)

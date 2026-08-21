@@ -7,30 +7,32 @@
 ![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![R supported](https://img.shields.io/badge/R-supported-276DC3?logo=r&logoColor=white)
 ![Repository checks](https://github.com/Haohaha-11/Draw-in-Win/actions/workflows/quality.yml/badge.svg)
-![Figures](https://img.shields.io/badge/figure%20artifacts-124-7A5AF8)
+![Figures](https://img.shields.io/badge/figure%20artifacts-130-7A5AF8)
 
-Draw-in-Win is a curated collection of research visualization code developed around mathematical modeling projects. It brings together 67 Python scripts, 2 R scripts, bundled example datasets, and 124 retained figure artifacts in a structure designed for discovery, reuse, and paper-ready export.
+Draw-in-Win is a curated collection of research visualization code developed around mathematical modeling projects. It brings together 69 Python scripts, 2 R scripts, bundled example datasets, and 130 retained figure artifacts in a structure designed for discovery, reuse, and paper-ready export.
 
 The repository preserves the visual language of the original research work—high-resolution PNG previews, editable SVG figures, and vector PDF outputs—while removing duplicate copies, machine-specific paths, editor caches, and redistributable commercial font files.
 
-## Gallery
+## Collection examples
 
-| Scientific composite | Network structure |
+Every top-level collection has a representative preview and a directly runnable starting point.
+
+| Scientific charts | Experimental charts |
 |:--:|:--:|
-| ![Scientific composite plot](docs/assets/gallery/scientific-combined-plot.png) | ![Grouped chord diagram](docs/assets/gallery/chord-diagram.png) |
-| **Multi-panel scientific comparison** | **Grouped SDG chord diagram** |
+| ![Paper-style multi-model radar comparison](collections/scientific-charts/paper_style_multi_radar.png) | ![Core-periphery network](collections/experimental-charts/core_periphery_network.png) |
+| **Paper-style multi-model radar**<br>[Script](collections/scientific-charts/paper_style_multi_radar.py) · `python collections/scientific-charts/paper_style_multi_radar.py` | **Core–periphery network**<br>[Script](collections/experimental-charts/hexin_bianyuan.py) · `python collections/experimental-charts/hexin_bianyuan.py` |
 
-| Multivariate structure | Three-dimensional comparison |
+| Sports analytics | Sensitivity analysis |
 |:--:|:--:|
-| ![Hexagonal correlation heatmap](docs/assets/gallery/correlation-heatmap-hexagon.png) | ![3D grouped bar chart](docs/assets/gallery/3d-grouped-bar-chart.png) |
-| **Mixed hexagonal correlation map** | **3D grouped comparison chart** |
+| ![Player comparison radar](collections/sports-analytics/Rank/player_radar_chart.png) | ![Omega sensitivity curves](collections/sensitivity-analysis/omega_sensitivity_W.png) |
+| **Player comparison radar**<br>[Script](collections/sports-analytics/Rank/player_radar_chart.py) · `python collections/sports-analytics/Rank/player_radar_chart.py` | **Omega sensitivity curves**<br>[Script](collections/sensitivity-analysis/omega_sensitivity_plot.py) · `python collections/sensitivity-analysis/omega_sensitivity_plot.py` |
 
-| Simulation and uncertainty | Flow and composition |
+| Model studies | SDG systems |
 |:--:|:--:|
-| ![Monte Carlo raincloud plot](docs/assets/gallery/monte-carlo-raincloud.png) | ![Sankey diagram](docs/assets/gallery/sankey-diagram.png) |
-| **Monte Carlo raincloud distribution** | **Sankey flow diagram** |
+| ![Season strategy comparison](collections/model-studies/season-and-recovery/season_comparison_bar.png) | ![SDG score evolution heatmap](collections/sdg-systems/sdg_score_evolution.png) |
+| **Season strategy comparison**<br>[Script](collections/model-studies/season-and-recovery/season_comparison_bar.py) · `python collections/model-studies/season-and-recovery/season_comparison_bar.py` | **SDG score evolution**<br>[Script](collections/sdg-systems/sdg_score_evolution.py) · `python collections/sdg-systems/sdg_score_evolution.py` |
 
-![Scenario recovery trajectory](docs/assets/gallery/recovery-trajectory.png)
+The radar example reproduces the visual composition of a paper figure from a raster reference. Its benchmark arrays are explicitly documented as visually reconstructed placeholders and should be replaced with source measurements for quantitative use.
 
 More previews are available in [`docs/assets/gallery`](docs/assets/gallery) and beside the scripts that generated them.
 
@@ -38,12 +40,12 @@ More previews are available in [`docs/assets/gallery`](docs/assets/gallery) and 
 
 | Collection | Focus | Code | Retained outputs |
 |---|---|---:|---:|
-| [`scientific-charts`](collections/scientific-charts) | Correlation matrices, chord diagrams, 3D comparisons, resilience and SDG strategy plots | 15 Python + 2 R | 21 |
+| [`scientific-charts`](collections/scientific-charts) | Correlation matrices, chord diagrams, multi-model radars, 3D comparisons, resilience and SDG strategy plots | 16 Python + 2 R | 24 |
 | [`experimental-charts`](collections/experimental-charts) | Polar bubbles, radial layouts, regression panels, core–periphery graphs, XGBoost/SHAP | 19 Python | 21 |
 | [`sports-analytics`](collections/sports-analytics) | Player rankings, roster flows, revenue composition, Monte Carlo and 3D waterfalls | 16 Python | 39 |
 | [`sensitivity-analysis`](collections/sensitivity-analysis) | Parameter sweeps and comparative sensitivity curves | 3 Python | 9 |
 | [`model-studies`](collections/model-studies) | Dynamic ranking, investment/popularity scenarios, season and recovery comparisons | 9 Python | 24 |
-| [`sdg-systems`](collections/sdg-systems) | Dynamic weights, network centrality, Spearman inputs, and supporting model code | 5 Python | Data/model support |
+| [`sdg-systems`](collections/sdg-systems) | Dynamic weights, score evolution, network centrality, Spearman inputs, and supporting model code | 6 Python | 3 + data/model support |
 
 See the [visualization catalog](docs/CATALOG.md) for chart families, representative scripts, input requirements, and expected output formats.
 
@@ -107,6 +109,14 @@ The full requirements file includes the heavier machine-learning stack used by t
 The two R examples require `tidyverse`, `ggplot2`, and `reshape2`.
 
 ### 3. Run a self-contained example
+
+Generate the featured four-panel radar comparison:
+
+```bash
+python collections/scientific-charts/paper_style_multi_radar.py
+```
+
+The script exports matching PNG, SVG, and PDF files beside itself. To try the broader scientific composite example:
 
 ```bash
 python collections/scientific-charts/scientific_combined_plot.py
