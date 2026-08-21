@@ -9,6 +9,10 @@ from matplotlib.patches import FancyArrowPatch
 import networkx as nx
 import numpy as np
 import random
+from pathlib import Path
+
+
+SCRIPT_DIR = Path(__file__).resolve().parent
 
 # Set random seed for reproducibility
 random.seed(42)
@@ -314,8 +318,8 @@ ax.set_xlim(-6.5, 6.5)
 ax.set_ylim(-6.5, 7.0)
 
 # 12. Save as high-quality SVG
-output_svg = 'New_Draw_XYL/core_periphery_network.svg'
-output_png = 'New_Draw_XYL/core_periphery_network.png'
+output_svg = SCRIPT_DIR / 'core_periphery_network.svg'
+output_png = SCRIPT_DIR / 'core_periphery_network.png'
 
 plt.savefig(output_svg, format='svg', dpi=300, bbox_inches='tight',
            facecolor='white', edgecolor='none')
