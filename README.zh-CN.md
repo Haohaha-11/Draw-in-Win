@@ -31,6 +31,92 @@ Draw-in-Win 是从真实数学建模研究项目中整理出的科研绘图库�
 
 更多预览见 [`docs/assets/gallery`](docs/assets/gallery)，其他历史输出保留在对应脚本旁边。
 
+## 完整图表图库
+
+下面展示全部 **54 个不重复的保留预览**：`collections/` 下的每一张 PNG、3 个只有 SVG 的独立图，以及 3 张只存在于精选图库中的有效成品。完全相同的重复拷贝只展示一次。点击预览可打开原始尺寸；如有对应 SVG/PDF，它们仍保留在生成脚本旁边。
+
+### 通用科研图——13 张
+
+| 论文风格多模型雷达图 | 组合科研图 |
+|:--:|:--:|
+| [![论文风格多模型雷达图](collections/scientific-charts/paper_style_multi_radar.png)](collections/scientific-charts/paper_style_multi_radar.png) | [![组合科研图](collections/scientific-charts/scientific_combined_plot.png)](collections/scientific-charts/scientific_combined_plot.png) |
+| **带误差线的分组柱状图** | **分组弦图** |
+| [![带误差线的分组柱状图](collections/scientific-charts/grouped_bar_with_error.png)](collections/scientific-charts/grouped_bar_with_error.png) | [![分组弦图](collections/scientific-charts/grouped_chord_diagram.png)](collections/scientific-charts/grouped_chord_diagram.png) |
+| **弦图独立图例** | **混合相关性矩阵** |
+| [![弦图独立图例](collections/scientific-charts/chord_diagram_legend.png)](collections/scientific-charts/chord_diagram_legend.png) | [![混合相关性矩阵](collections/scientific-charts/mixed_correlation_matrix.png)](collections/scientific-charts/mixed_correlation_matrix.png) |
+| **韧性轨迹图** | **SDG 最终得分对比** |
+| [![韧性轨迹图](collections/scientific-charts/resilience_trajectory_plot.png)](collections/scientific-charts/resilience_trajectory_plot.png) | [![SDG 最终得分对比](collections/scientific-charts/sdg_final_scores_plot.png)](collections/scientific-charts/sdg_final_scores_plot.png) |
+| **静态与动态权重对比** | **静态与动态权重图例** |
+| [![静态与动态权重对比](collections/scientific-charts/static_vs_dynamic_weights_plot.png)](collections/scientific-charts/static_vs_dynamic_weights_plot.png) | [![静态与动态权重图例](collections/scientific-charts/static_vs_dynamic_legend.png)](collections/scientific-charts/static_vs_dynamic_legend.png) |
+| **策略对比图** | **三维分组柱状图** |
+| [![策略对比图](collections/scientific-charts/strategy_comparison_plot.png)](collections/scientific-charts/strategy_comparison_plot.png) | [![三维分组柱状图](docs/assets/gallery/3d-grouped-bar-chart.png)](docs/assets/gallery/3d-grouped-bar-chart.png) |
+| **六边形相关性热图** | |
+| [![六边形相关性热图](docs/assets/gallery/correlation-heatmap-hexagon.png)](docs/assets/gallery/correlation-heatmap-hexagon.png) | |
+
+### 实验性图表——13 张
+
+| 回归与密度诊断组合图 | 核心—边缘网络 |
+|:--:|:--:|
+| [![回归与密度诊断组合图](collections/experimental-charts/40.png)](collections/experimental-charts/40.png) | [![核心—边缘网络](collections/experimental-charts/core_periphery_network.png)](collections/experimental-charts/core_periphery_network.png) |
+| **极坐标气泡图** | **Mantel 相关性热图** |
+| [![极坐标气泡图](collections/experimental-charts/grain_polar_bubble.png)](collections/experimental-charts/grain_polar_bubble.png) | [![Mantel 相关性热图](collections/experimental-charts/mantel_heatmap.png)](collections/experimental-charts/mantel_heatmap.png) |
+| **三维分组瀑布图** | **嵌套覆盖关系图** |
+| [![三维分组瀑布图](collections/experimental-charts/output.png)](collections/experimental-charts/output.png) | [![嵌套覆盖关系图](collections/experimental-charts/recreated_chart.png)](collections/experimental-charts/recreated_chart.png) |
+| **平滑径向图 v2** | **平滑径向图** |
+| [![平滑径向图 v2](collections/experimental-charts/smooth_radial_chart_v2_1.png)](collections/experimental-charts/smooth_radial_chart_v2_1.png) | [![平滑径向图](collections/experimental-charts/smooth_radial_chart.png)](collections/experimental-charts/smooth_radial_chart.png) |
+| **平滑光谱图** | **光谱图** |
+| [![平滑光谱图](collections/experimental-charts/spectral_plot_smooth.png)](collections/experimental-charts/spectral_plot_smooth.png) | [![光谱图](collections/experimental-charts/spectral_plot.png)](collections/experimental-charts/spectral_plot.png) |
+| **XGBoost 与 SHAP 分析** | **粮食产量图** |
+| [![XGBoost 与 SHAP 分析](docs/assets/gallery/xgb-shap-analysis.png)](docs/assets/gallery/xgb-shap-analysis.png) | [![粮食产量图](collections/experimental-charts/grain_yield_chart.svg)](collections/experimental-charts/grain_yield_chart.svg) |
+| **线性拟合诊断图** | |
+| [![线性拟合诊断图](collections/experimental-charts/xianxingnihe.svg)](collections/experimental-charts/xianxingnihe.svg) | |
+
+### 体育分析——16 张
+
+| 三维分组柱状图 W | 三维实心分组柱状图 |
+|:--:|:--:|
+| [![三维分组柱状图 W](collections/sports-analytics/3d_bar_W_output.png)](collections/sports-analytics/3d_bar_W_output.png) | [![三维实心分组柱状图](collections/sports-analytics/3d_bar_W_solid_output.png)](collections/sports-analytics/3d_bar_W_solid_output.png) |
+| **三维分组柱状图 v2** | **三维分组柱状图 SVG 变体** |
+| [![三维分组柱状图 v2](collections/sports-analytics/3d_bar_W_v2_output.png)](collections/sports-analytics/3d_bar_W_v2_output.png) | [![三维分组柱状图 SVG 变体](collections/sports-analytics/3d_bar_W_output_1.svg)](collections/sports-analytics/3d_bar_W_output_1.svg) |
+| **三维瀑布图 W 变体 2** | **三维瀑布图 C** |
+| [![三维瀑布图 W 变体 2](collections/sports-analytics/3d_waterfall_2_W.png)](collections/sports-analytics/3d_waterfall_2_W.png) | [![三维瀑布图 C](collections/sports-analytics/3d_waterfall_C.png)](collections/sports-analytics/3d_waterfall_C.png) |
+| **三维瀑布图 P** | **三维瀑布图 W** |
+| [![三维瀑布图 P](collections/sports-analytics/3d_waterfall_P.png)](collections/sports-analytics/3d_waterfall_P.png) | [![三维瀑布图 W](collections/sports-analytics/3d_waterfall_W.png)](collections/sports-analytics/3d_waterfall_W.png) |
+| **收入构成环形图** | **阵容流动桑基图** |
+| [![收入构成环形图](collections/sports-analytics/Components/lakers_revenue_donut.png)](collections/sports-analytics/Components/lakers_revenue_donut.png) | [![阵容流动桑基图](collections/sports-analytics/Components/lakers_sankey.png)](collections/sports-analytics/Components/lakers_sankey.png) |
+| **蒙特卡洛雨云图** | **球员排名花瓣图** |
+| [![蒙特卡洛雨云图](collections/sports-analytics/monte_carlo_raincloud.png)](collections/sports-analytics/monte_carlo_raincloud.png) | [![球员排名花瓣图](collections/sports-analytics/player_ranking_petal.png)](collections/sports-analytics/player_ranking_petal.png) |
+| **球员 Delta-V 排名图** | **球员排名玫瑰图** |
+| [![球员 Delta-V 排名图](collections/sports-analytics/Rank/lakers_deltaV_bar_chart.png)](collections/sports-analytics/Rank/lakers_deltaV_bar_chart.png) | [![球员排名玫瑰图](collections/sports-analytics/Rank/lakers_ranking_rose_chart.png)](collections/sports-analytics/Rank/lakers_ranking_rose_chart.png) |
+| **球员对比雷达图** | **带状编码图** |
+| [![球员对比雷达图](collections/sports-analytics/Rank/player_radar_chart.png)](collections/sports-analytics/Rank/player_radar_chart.png) | [![带状编码图](collections/sports-analytics/tiaodai_output.png)](collections/sports-analytics/tiaodai_output.png) |
+
+### 敏感性分析——3 张
+
+| Omega 敏感性 W | Omega 敏感性 P |
+|:--:|:--:|
+| [![Omega 敏感性 W](collections/sensitivity-analysis/omega_sensitivity_W.png)](collections/sensitivity-analysis/omega_sensitivity_W.png) | [![Omega 敏感性 P](collections/sensitivity-analysis/omega_sensitivity_P.png)](collections/sensitivity-analysis/omega_sensitivity_P.png) |
+| **Omega 敏感性 C** | |
+| [![Omega 敏感性 C](collections/sensitivity-analysis/omega_sensitivity_C.png)](collections/sensitivity-analysis/omega_sensitivity_C.png) | |
+
+### 模型研究——8 张
+
+| 基准候选排名 | Case-B 候选排名 |
+|:--:|:--:|
+| [![基准候选排名](collections/model-studies/dynamic-ranking/Dynamic/baseline_candidate_rank_bar.png)](collections/model-studies/dynamic-ranking/Dynamic/baseline_candidate_rank_bar.png) | [![Case-B 候选排名](collections/model-studies/dynamic-ranking/Dynamic/case_b_candidate_rank_bar.png)](collections/model-studies/dynamic-ranking/Dynamic/case_b_candidate_rank_bar.png) |
+| **现金流散点图** | **投资—热度散点图** |
+| [![现金流散点图](collections/model-studies/investment-and-popularity/Model_4新/cash_flow_scatter.png)](collections/model-studies/investment-and-popularity/Model_4新/cash_flow_scatter.png) | [![投资—热度散点图](collections/model-studies/investment-and-popularity/Model_4新/investment_pop_scatter.png)](collections/model-studies/investment-and-popularity/Model_4新/investment_pop_scatter.png) |
+| **热度策略对比** | **热度构成饼图** |
+| [![热度策略对比](collections/model-studies/investment-and-popularity/pop_comparison.png)](collections/model-studies/investment-and-popularity/pop_comparison.png) | [![热度构成饼图](collections/model-studies/investment-and-popularity/pop_pie_chart.png)](collections/model-studies/investment-and-popularity/pop_pie_chart.png) |
+| **赛季策略对比** | **多赛季恢复轨迹** |
+| [![赛季策略对比](collections/model-studies/season-and-recovery/season_comparison_bar.png)](collections/model-studies/season-and-recovery/season_comparison_bar.png) | [![多赛季恢复轨迹](collections/model-studies/season-and-recovery/v_recovery_plot.png)](collections/model-studies/season-and-recovery/v_recovery_plot.png) |
+
+### SDG 系统——1 张
+
+| SDG 得分演化 | |
+|:--:|:--:|
+| [![SDG 得分演化](collections/sdg-systems/sdg_score_evolution.png)](collections/sdg-systems/sdg_score_evolution.png) | |
+
 ## 内容结构
 
 | 主题集合 | 主要内容 |
