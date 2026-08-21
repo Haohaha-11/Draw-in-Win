@@ -1,0 +1,16 @@
+﻿case,t,lakers_pop
+Case A - Las Vegas (地理竞争型),0,0.5
+Case A - Las Vegas (地理竞争型),1,0.527551345
+Case A - Las Vegas (地理竞争型),2,0.516195639
+Case A - Las Vegas (地理竞争型),3,0.490936508
+Case A - Las Vegas (地理竞争型),4,0.460890486
+Case B - Seattle (受众重叠型),0,0.5
+Case B - Seattle (受众重叠型),1,0.531337169
+Case B - Seattle (受众重叠型),2,0.530636914
+Case B - Seattle (受众重叠型),3,0.513448672
+Case B - Seattle (受众重叠型),4,0.487966348
+Case C - Mexico City (市场互补型),0,0.5
+Case C - Mexico City (市场互补型),1,0.538967992
+Case C - Mexico City (市场互补型),2,0.533232861
+Case C - Mexico City (市场互补型),3,0.509102668
+Case C - Mexico City (市场互补型),4,0.477619666

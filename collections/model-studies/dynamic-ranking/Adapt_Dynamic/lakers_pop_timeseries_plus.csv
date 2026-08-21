@@ -1,0 +1,16 @@
+﻿case,t,lakers_pop,ω（利润系数）,ρ（风险厌恶）
+Case A - Las Vegas (地理竞争型),0,0.5,0.3,0.4
+Case A - Las Vegas (地理竞争型),1,0.553848023,0.6,0.2
+Case A - Las Vegas (地理竞争型),2,0.538480228,0.3,0.4
+Case A - Las Vegas (地理竞争型),3,0.524848023,0.3,0.4
+Case A - Las Vegas (地理竞争型),4,0.503848023,0.3,0.4
+Case B - Seattle (受众重叠型),0,0.5,0.3,0.4
+Case B - Seattle (受众重叠型),1,0.564802283,0.6,0.2
+Case B - Seattle (受众重叠型),2,0.556848023,0.3,0.4
+Case B - Seattle (受众重叠型),3,0.534748023,0.3,0.4
+Case B - Seattle (受众重叠型),4,0.513848023,0.3,0.4
+Case C - Mexico City (市场互补型),0,0.5,0.3,0.4
+Case C - Mexico City (市场互补型),1,0.549802283,0.6,0.2
+Case C - Mexico City (市场互补型),2,0.508480228,0.3,0.4
+Case C - Mexico City (市场互补型),3,0.483848023,0.3,0.4
+Case C - Mexico City (市场互补型),4,0.451384802,0.3,0.4

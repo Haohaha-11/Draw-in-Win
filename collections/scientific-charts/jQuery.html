@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>ECharts 北京 AQI 矢量导出演示</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <style>
+        body { font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif; padding: 20px; background-color: #f5f5f5; }
+        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        #main { width: 100%; height: 500px; margin-bottom: 20px; }
+        .btn-group { display: flex; gap: 10px; }
+        button {
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        button:hover { opacity: 0.8; }
+        .btn-pdf { background-color: #607d8b; } /* 灰色 - PDF */
+        .btn-svg { background-color: #2196F3; } /* 蓝色 - SVG */
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>北京 AQI 指数历史数据 (矢量导出版)</h2>
+        <div id="main"></div>
+
+        <div class="btn-group">
+            <button class="btn-svg" onclick="exportToSVG()">保存为 SVG (推荐用于 PPT，无限放大不糊)</button>
+            <button class="btn-pdf" onclick="exportToPDF()">保存为 PDF (带纸张边框)</button>
+        </div>
+    </div>
+
+    <script>
+        var myChart;
+
+        window.onload = function() {
+            var chartDom = document.getElementById('main');
+
+            // 【核心修改点 1】初始化时指定 renderer 为 'svg'
+            myChart = echarts.init(chartDom, null, { renderer: 'svg' });
+
+            var dataUrl = 'https://fastly.jsdelivr.net/gh/apache/echarts-website@asf-site/examples/data/asset/data/aqi-beijing.json';
+
+            $.get(dataUrl, function (data) {
+                var option = {
+                    title: { text: 'Beijing AQI', left: '1%' },
+                    tooltip: { trigger: 'axis' },
+                    grid: { left: '5%', right: '5%', bottom: '10%', containLabel: true },
+                    xAxis: {
+                        data: data.map(function (item) { return item[0]; })
+                    },
+                    yAxis: {},
+                    toolbox: {
+                        right: 10,
+                        feature: {
+                            dataZoom: { yAxisIndex: 'none' },
+                            restore: {},
+                            saveAsImage: {}
+                        }
+                    },
+                    dataZoom: [
+                        { startValue: '2014-06-01' },
+                        { type: 'inside' }
+                    ],
+                    visualMap: {
+                        top: 50,
+                        right: 10,
+                        pieces: [
+                            { gt: 0, lte: 50, color: '#93CE07' },
+                            { gt: 50, lte: 100, color: '#FBDB0F' },
+                            { gt: 100, lte: 150, color: '#FC7D02' },
+                            { gt: 150, lte: 200, color: '#FD0100' },
+                            { gt: 200, lte: 300, color: '#AA069F' },
+                            { gt: 300, color: '#AC3B2A' }
+                        ],
+                        outOfRange: { color: '#999' }
+                    },
+                    series: {
+                        name: 'Beijing AQI',
+                        type: 'line',
+                        data: data.map(function (item) { return item[1]; }),
+                        markLine: {
+                            silent: true,
+                            lineStyle: { color: '#333' },
+                            data: [
+                                { yAxis: 50 }, { yAxis: 100 }, { yAxis: 150 },
+                                { yAxis: 200 }, { yAxis: 300 }
+                            ]
+                        }
+                    },
+                    backgroundColor: '#ffffff'
+                };
+
+                myChart.setOption(option);
+            });
+        };
+
+        // 【新增功能】导出 SVG 函数
+        function exportToSVG() {
+            if (!myChart) return;
+
+            // 1. 获取 ECharts 生成的 SVG 字符串
+            const svgString = myChart.renderToSVGString();
+
+            // 2. 构造 Blob 对象
+            const blob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
+
+            // 3. 触发下载
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'Beijing_AQI_Vector.svg';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        }
+
+        // 原有的 PDF 导出逻辑（基于位图截图）
+        async function exportToPDF() {
+            if (!myChart) return;
+
+            const { jsPDF } = window.jspdf;
+
+            // 获取图表截图 (此时为 PNG 格式)
+            const imgData = myChart.getDataURL({
+                type: 'png',
+                pixelRatio: 3, // 提高清晰度
+                backgroundColor: '#fff'
+            });
+
+            const pdf = new jsPDF('l', 'mm', 'a4');
+            pdf.addImage(imgData, 'PNG', 10, 10, 277, 140);
+            pdf.save('Beijing_AQI_Report.pdf');
+        }
+
+        // 响应式处理
+        window.addEventListener('resize', function() {
+            myChart && myChart.resize();
+        });
+    </script>
+</body>
+</html>

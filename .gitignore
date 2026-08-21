@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+venv/
+env/
+.conda/
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.code-workspace
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+
+# TeX build products
+*.aux
+*.log
+*.out
+*.synctex.gz
+
+# Local secrets and configuration
+.env
+.env.*
+!.env.example
+
+# Commercial/proprietary font binaries are not redistributed
+*.ttf
+*.otf

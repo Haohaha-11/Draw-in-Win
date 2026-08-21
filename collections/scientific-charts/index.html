@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>ECharts 导出 PDF 示例</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        #main { width: 800px; height: 400px; border: 1px solid #eee; margin-bottom: 20px; }
+        button { padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; border-radius: 4px; }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+
+    <h2>我的数据图表</h2>
+    <div id="main"></div>
+
+    <button onclick="exportToPDF()">导出为 PDF</button>
+
+    <script>
+        // 1. 初始化图表
+        const chartDom = document.getElementById('main');
+        const myChart = echarts.init(chartDom);
+        // 只需要替换的是这样一部份
+        const option = {
+            title: { text: '年度销售统计' },
+            tooltip: {},
+            xAxis: { data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'] },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20],
+                itemStyle: { color: '#5470c6' }
+            }],
+            backgroundColor: '#ffffff' // 重要：设置白色背景，防止PDF导出后背景变黑
+        };
+        myChart.setOption(option);
+
+        // 2. 导出 PDF 的核心逻辑
+        async function exportToPDF() {
+            // 获取 jsPDF 库
+            const { jsPDF } = window.jspdf;
+
+            // A. 将 ECharts 转换为图片数据 (Base64)
+            // pixelRatio 设为 2 可以增加清晰度
+            const imgData = myChart.getDataURL({
+                type: 'png',
+                pixelRatio: 2,
+                backgroundColor: '#fff'
+            });
+
+            // B. 创建 PDF 文档 (方向：横向 'l', 单位：'mm', 纸张：'a4')
+            const pdf = new jsPDF('l', 'mm', 'a4');
+
+            // C. 添加图片到 PDF
+            // 参数说明：(图片, 格式, x, y, 宽度, 高度)
+            // A4 横向尺寸是 297mm x 210mm
+            pdf.addImage(imgData, 'PNG', 15, 15, 260, 130);
+
+            // D. 保存文件
+            pdf.save('ECharts_Report.pdf');
+        }
+    </script>
+</body>
+</html>

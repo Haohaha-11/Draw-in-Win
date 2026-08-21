@@ -1,0 +1,18 @@
+============================================================
+第 1名: SDG  4 - 优质教育 (Quality Education)                           | 中心度: 0.326893
+第 2名: SDG  6 - 清洁饮水和卫生设施 (Clean Water and Sanitation)             | 中心度: 0.326893
+第 3名: SDG 17 - 促进目标实现的伙伴关系 (Partnerships for the Goals)           | 中心度: 0.326893
+第 4名: SDG  5 - 性别平等 (Gender Equality)                             | 中心度: 0.326781
+第 5名: SDG  9 - 产业、创新和基础设施 (Industry, Innovation and Infrastructure) | 中心度: 0.326467
+第 6名: SDG  1 - 无贫穷 (No Poverty)                                   | 中心度: 0.314563
+第 7名: SDG  3 - 良好健康与福祉 (Good Health and Well-being)               | 中心度: 0.314563
+第 8名: SDG  7 - 经济适用的清洁能源 (Affordable and Clean Energy)            | 中心度: 0.309541
+第 9名: SDG  8 - 体面工作和经济增长 (Decent Work and Economic Growth)        | 中心度: 0.198860
+第10名: SDG 10 - 减少不平等 (Reduced Inequalities)                       | 中心度: -0.111874
+第11名: SDG 11 - 可持续城市和社区 (Sustainable Cities and Communities)      | 中心度: -0.155542
+第12名: SDG  2 - 零饥饿 (Zero Hunger)                                  | 中心度: -0.231479
+第13名: SDG 13 - 气候行动 (Climate Action)                              | 中心度: -0.258676
+第14名: SDG 12 - 负责任消费和生产 (Responsible Consumption and Production)  | 中心度: -0.295603
+第15名: SDG 15 - 陆地生物 (Life on Land)                                | 中心度: -0.365022
+第16名: SDG 16 - 和平、正义与强大机构 (Peace, Justice and Strong Institutions) | 中心度: -0.365022
+第17名: SDG 14 - 水下生物 (Life Below Water)                            | 中心度: -0.365132
