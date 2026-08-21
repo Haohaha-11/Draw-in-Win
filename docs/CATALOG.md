@@ -11,6 +11,9 @@ Location: [`collections/scientific-charts`](../collections/scientific-charts)
 | Multi-model radar comparison | `paper_style_multi_radar.py` | Visually reconstructed placeholder arrays | PNG, PDF, SVG |
 | Adaptive-stage token-retention study | `adaptive_stage_empirical_study.py` | Visually reconstructed curve checkpoints and deterministic candidate cloud | PNG, PDF, SVG |
 | Progressive-stage continuity study | `progressive_stage_empirical_study.py` | Visually reconstructed layer sequences; mean computed from the five series | PNG, PDF, SVG |
+| Multi-metric efficiency matrix | `efficiency_studies.py` | Transcribed and visually reconstructed benchmark bars | PNG, PDF, SVG |
+| Stage necessity and adaptive-alpha ablation | `stage_ablation_studies.py` | Visually reconstructed deterministic small-multiple sequences | PNG, PDF, SVG |
+| Pruning-layer schedule surface | `pruning_layer_schedule.py` | Deterministic analytic response surface with projected contours | PNG, PDF, SVG |
 | 3D grouped bars | `3d_grouped_bar_chart.py` | Embedded | PNG, PDF, SVG |
 | 3D strategy comparison | `3d_grouped_comparison_chart.py` | Embedded | PNG, PDF |
 | Correlation heatmap | `correlation_heatmap.py` | Embedded matrix | PNG |

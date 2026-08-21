@@ -7,9 +7,9 @@
 ![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![R supported](https://img.shields.io/badge/R-supported-276DC3?logo=r&logoColor=white)
 ![Repository checks](https://github.com/Haohaha-11/Draw-in-Win/actions/workflows/quality.yml/badge.svg)
-![Figures](https://img.shields.io/badge/figure%20artifacts-136-7A5AF8)
+![Figures](https://img.shields.io/badge/figure%20artifacts-145-7A5AF8)
 
-Draw-in-Win is a curated collection of research visualization code developed around mathematical modeling projects. It brings together 71 Python scripts, 2 R scripts, bundled example datasets, and 136 retained figure artifacts in a structure designed for discovery, reuse, and paper-ready export.
+Draw-in-Win is a curated collection of research visualization code developed around mathematical modeling projects. It brings together 74 Python scripts, 2 R scripts, bundled example datasets, and 145 retained figure artifacts in a structure designed for discovery, reuse, and paper-ready export.
 
 The repository preserves the visual language of the original research work—high-resolution PNG previews, editable SVG figures, and vector PDF outputs—while removing duplicate copies, machine-specific paths, editor caches, and redistributable commercial font files.
 
@@ -32,21 +32,25 @@ Every top-level collection has a representative preview and a directly runnable 
 | ![Season strategy comparison](collections/model-studies/season-and-recovery/season_comparison_bar.png) | ![SDG score evolution heatmap](collections/sdg-systems/sdg_score_evolution.png) |
 | **Season strategy comparison**<br>[Script](collections/model-studies/season-and-recovery/season_comparison_bar.py) · `python collections/model-studies/season-and-recovery/season_comparison_bar.py` | **SDG score evolution**<br>[Script](collections/sdg-systems/sdg_score_evolution.py) · `python collections/sdg-systems/sdg_score_evolution.py` |
 
-The radar and empirical-stage examples reproduce the visual composition of paper figures from raster references. Their benchmark arrays, curve checkpoints, and search trajectories are explicitly documented as visually reconstructed placeholders and should be replaced with source measurements for quantitative use.
+The paper-reference examples reproduce multi-model radar, empirical-stage, efficiency, ablation, and pruning-schedule figures from raster references. Their arrays, curve checkpoints, bar values, search trajectories, and response surfaces are explicitly documented as visually reconstructed placeholders and should be replaced with source measurements for quantitative use.
 
 More previews are available in [`docs/assets/gallery`](docs/assets/gallery) and beside the scripts that generated them.
 
 ## Complete figure gallery
 
-The gallery below displays all **56 unique retained previews**: every PNG under `collections/`, three standalone SVG-only figures, and three additional rendered figures that exist only in the curated gallery. Exact duplicate copies are shown once. Click any preview to open the full-resolution asset; alternate SVG/PDF exports remain beside their generating scripts where available.
+The gallery below displays all **59 unique retained previews**: every PNG under `collections/`, three standalone SVG-only figures, and three additional rendered figures that exist only in the curated gallery. Exact duplicate copies are shown once. Click any preview to open the full-resolution asset; alternate SVG/PDF exports remain beside their generating scripts where available.
 
-### Scientific charts — 15 previews
+### Scientific charts — 18 previews
 
 | Paper-style multi-model radar | Scientific composite panel |
 |:--:|:--:|
 | [![Paper-style multi-model radar](collections/scientific-charts/paper_style_multi_radar.png)](collections/scientific-charts/paper_style_multi_radar.png) | [![Scientific composite panel](collections/scientific-charts/scientific_combined_plot.png)](collections/scientific-charts/scientific_combined_plot.png) |
 | **Adaptive-stage token study** | **Progressive-stage continuity study** |
 | [![Adaptive-stage token study](collections/scientific-charts/adaptive_stage_empirical_study.png)](collections/scientific-charts/adaptive_stage_empirical_study.png) | [![Progressive-stage continuity study](collections/scientific-charts/progressive_stage_empirical_study.png)](collections/scientific-charts/progressive_stage_empirical_study.png) |
+| **Efficiency-study matrix** | **Stage-ablation small multiples** |
+| [![Efficiency-study matrix](collections/scientific-charts/efficiency_studies.png)](collections/scientific-charts/efficiency_studies.png) | [![Stage-ablation small multiples](collections/scientific-charts/stage_ablation_studies.png)](collections/scientific-charts/stage_ablation_studies.png) |
+| **Pruning-layer schedule surface** | |
+| [![Pruning-layer schedule surface](collections/scientific-charts/pruning_layer_schedule.png)](collections/scientific-charts/pruning_layer_schedule.png) | |
 | **Grouped bars with error** | **Grouped chord diagram** |
 | [![Grouped bars with error](collections/scientific-charts/grouped_bar_with_error.png)](collections/scientific-charts/grouped_bar_with_error.png) | [![Grouped chord diagram](collections/scientific-charts/grouped_chord_diagram.png)](collections/scientific-charts/grouped_chord_diagram.png) |
 | **Chord-diagram legend** | **Mixed correlation matrix** |
@@ -128,7 +132,7 @@ The gallery below displays all **56 unique retained previews**: every PNG under 
 
 | Collection | Focus | Code | Retained outputs |
 |---|---|---:|---:|
-| [`scientific-charts`](collections/scientific-charts) | Correlation matrices, chord diagrams, multi-model radars, empirical-stage studies, 3D comparisons, resilience and SDG strategy plots | 18 Python + 2 R | 30 |
+| [`scientific-charts`](collections/scientific-charts) | Correlation matrices, chord diagrams, paper-reference studies, ablation small multiples, response surfaces, 3D comparisons, resilience and SDG strategy plots | 21 Python + 2 R | 39 |
 | [`experimental-charts`](collections/experimental-charts) | Polar bubbles, radial layouts, regression panels, core–periphery graphs, XGBoost/SHAP | 19 Python | 21 |
 | [`sports-analytics`](collections/sports-analytics) | Player rankings, roster flows, revenue composition, Monte Carlo and 3D waterfalls | 16 Python | 39 |
 | [`sensitivity-analysis`](collections/sensitivity-analysis) | Parameter sweeps and comparative sensitivity curves | 3 Python | 9 |
@@ -211,7 +215,15 @@ python collections/scientific-charts/adaptive_stage_empirical_study.py
 python collections/scientific-charts/progressive_stage_empirical_study.py
 ```
 
-Both scripts also accept `--output-dir` and `--dpi`. Their embedded values are deterministic visual estimates from the raster reference, not recovered experimental measurements. To try the broader scientific composite example:
+Run the efficiency matrix, stage ablation, and pruning-schedule surface reproductions with:
+
+```bash
+python collections/scientific-charts/efficiency_studies.py
+python collections/scientific-charts/stage_ablation_studies.py
+python collections/scientific-charts/pruning_layer_schedule.py
+```
+
+All five paper-study scripts accept `--output-dir` and `--dpi`. Their embedded values are deterministic visual estimates from raster references, not recovered experimental measurements. To try the broader scientific composite example:
 
 ```bash
 python collections/scientific-charts/scientific_combined_plot.py

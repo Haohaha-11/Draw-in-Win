@@ -12,10 +12,13 @@ These scripts generate or embed their own data and are the fastest way to explor
 - `collections/scientific-charts/grouped_bar_with_error.py`
 - `collections/scientific-charts/adaptive_stage_empirical_study.py`
 - `collections/scientific-charts/progressive_stage_empirical_study.py`
+- `collections/scientific-charts/efficiency_studies.py`
+- `collections/scientific-charts/stage_ablation_studies.py`
+- `collections/scientific-charts/pruning_layer_schedule.py`
 - `collections/experimental-charts/smooth_radial_chart.py`
 - `collections/experimental-charts/xgb_shap_2.py` (computationally heavier)
 
-The adaptive- and progressive-stage scripts are self-contained and deterministic, but their embedded values were visually reconstructed from a raster reference. They reproduce the figure design and should not be treated as the source experiment's measurements. Replace the documented checkpoints and sequences before making quantitative claims.
+The paper-reference scripts are self-contained and deterministic, but their embedded values were transcribed or visually reconstructed from raster references. They reproduce figure designs and should not be treated as the source experiments' measurements. Replace the documented arrays, checkpoints, sequences, and analytic surface before making quantitative claims.
 
 ## Level B — bundled-data recipes
 
